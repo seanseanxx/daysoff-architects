@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daysoff 设计研究室 © 2025</title>
+    <meta name="description" content="专业的设计服务，为您打造独特的空间体验">
+    
+    <!-- Favicon 图标配置 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    
+    <!-- 字体引入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --primary-color: #F5F5F5;
+        --text-color: #4A4A4A;
+        --background-color: #FFFFFF;
+        --border-color: #E0E0E0;
+      }
+      
+      body {
+        margin: 0;
+        font-family: 'Noto Sans SC', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      
+      .header {
+        padding: 2rem 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--background-color);
+      }
+      
+      .logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 3rem;
+      }
+      
+      .nav-links a {
+        color: var(--text-color);
+        font-weight: 400;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+      
+      .banner {
+        width: 100%;
+        margin-bottom: 2rem;
+        position: relative;
+        height: 85vh;  /* 添加固定高度 */
+      }
+      
+      .banner .slide {
+        display: none;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;  /* 确保 slide 填充整个容器 */
+      }
+
+      .banner .slide.active {
+        display: block;
+        opacity: 1;
+      }
+      
+      .banner img {
+        width: 100%;
+        height: 100%;  /* 改为100%以适应容器 */
+        object-fit: cover;
+      }
+
+      .dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+      }
+
+      .dot.active {
+        background: white;
+      }
+      
+      .projects {
+        padding: 2rem 10%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+      .project-card a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      .project-card {
+        text-align: center;
+        background: var(--background-color);
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-card img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+      
+      .project-card h3 {
+        margin: 1rem 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      
+      .project-card p {
+        margin: 0;
+        color: #666;
+        font-size: 0.95rem;
+      }
+      
+      footer {
+        padding: 3rem 10%;
+        background: var(--primary-color);
+        color: var(--text-color);
+        margin-top: 6rem;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DAYSOFF</a></div>
+      <nav class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact.html">联系我们</a>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <div class="slide active">
+        <a href="commercial-01.html">
+          <img src="01/01.jpg" alt="ARO酒吧设计">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="commercial-04.html">
+          <img src="04/01.jpg" alt="丘末烘焙工坊">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="commercial-03.html">
+          <img src="03/01.jpg" alt="Day Day Off">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="commercial-05.html">
+          <img src="05/01.png" alt="田园度假屋">
+        </a>
+      </div>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="project-card">
+        <a href="commercial-01.html">
+          <img src="01/01.jpg" alt="ARO酒吧设计">
+          <h3>ARO香水酒吧</h3>
+          <p>位于杭州的精致酒吧空间，将现代设计美学与休闲氛围完美融合。</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="commercial-02.html">
+          <img src="02/01.jpg" alt="CUTO清吧">
+          <h3>CUTO清吧</h3>
+          <p>精致小空间里的慢生活体验</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="commercial-03.html">
+          <img src="03/01.jpg" alt="Day Day Off">
+          <h3>Day Day Off</h3>
+          <p>164平米的咖啡空间</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="commercial-04.html">
+          <img src="04/01.jpg" alt="丘末茶叶工坊">
+          <h3>丘末茶叶工坊</h3>
+          <p>453平米的产研展示空间</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="commercial-05.html">
+          <img src="05/03.png" alt="田园度假屋">
+          <h3>田园度假屋</h3>
+          <p>270平米的诗意栖居空间</p>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 DAYSOFF. 保留所有权利</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+    
+        function showSlide(index) {
+          // 移除所有slide的active类（此时CSS会自动处理display属性）
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+          
+          // 添加active类到当前slide和dot
+          slides[index].classList.add('active');
+          dots[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+    
+        // 点击圆点切换
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
+        });
+    
+        // 自动轮播
+        setInterval(nextSlide, 3500);
+      });
+    </script>
+  </body>
+</html>

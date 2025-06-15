@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>关于我们 - DAYSOFF</title>
+    <meta name="description" content="做二休五设计研究室 - 专业的建筑设计服务">
+    
+    <!-- Favicon 图标配置 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --primary-color: #F5F5F5;
+        --text-color: #4A4A4A;
+        --background-color: #FFFFFF;
+        --border-color: #E0E0E0;
+      }
+      
+      body {
+        margin: 0;
+        font-family: 'Noto Sans SC', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      
+      .header {
+        padding: 2rem 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--background-color);
+      }
+      
+      .logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 3rem;
+      }
+      
+      .nav-links a {
+        color: var(--text-color);
+        font-weight: 400;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      .about-section {
+        padding: 6rem 10%;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin: 4rem 0;
+      }
+
+      @media (max-width: 640px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      @media (max-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .team-member {
+        padding: 2rem;
+        background: var(--background-color);
+        text-align: center;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+      }
+      
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+      }
+
+      .team-member h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      .team-member p {
+        margin: 0;
+        color: #666;
+      }
+
+      .studio-intro {
+        margin: 4rem 0;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        max-width: 900px;
+      }
+
+      footer {
+        padding: 3rem 10%;
+        background: var(--primary-color);
+        color: var(--text-color);
+        margin-top: 6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DAYSOFF</a></div>
+      <nav class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact.html">联系我们</a>
+      </nav>
+    </header>
+
+    <section class="about-section">
+      <h1>做二休五设计研究室</h1>
+      
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="team/01.jpg" alt="贺宁">
+          <h3>贺宁</h3>
+          <p>Designer | Founder</p>
+        </div>
+        <div class="team-member">
+          <img src="team/02.jpg" alt="刘昕">
+          <h3>刘昕</h3>
+          <p>Architect | Partner</p>
+        </div>
+        <div class="team-member">
+          <img src="team/03.jpg" alt="郭文韬">
+          <h3>郭文韬</h3>
+          <p>Senior Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="team/04.jpg" alt="Seven.Y">
+          <h3>Seven.Y</h3>
+          <p>Director of Operations</p>
+        </div>
+        <div class="team-member">
+          <img src="team/05.jpg" alt="Fre. H">
+          <h3>Fre. H</h3>
+          <p>Operations Specialist</p>
+        </div>
+        <div class="team-member">
+          <img src="team/06.jpg" alt="江濛">
+          <h3>江濛</h3>
+          <p>Director of Brandings</p>
+        </div>
+      </div>
+
+      <div class="studio-intro">
+        <h2>团队背景</h2>
+        <p>团队成员来自于：哈佛GSD、华盛顿圣路易斯、美国密歇根、华南理工、华中科技</p>
+        <p>曾工作于：KengoKuma&Associate (隈研吾建筑都市设计事务所)、Lorcan O'Herlihy Architects 洛杉矶、Spector Group 纽约、中国建筑设计研究院、上海华东建筑设计院、BMW等。工作室旗下运营多家酒吧及咖啡店，有十二年的酒吧运营经验。</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 DAYSOFF. 保留所有权利</p>
+    </footer>
+  </body>
+</html>
